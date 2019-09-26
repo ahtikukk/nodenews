@@ -18,5 +18,8 @@
   ],
   "author": "mahoraz",
   "license": "LGPL-3.0-or-later",
-  "homepage": "https://bitbucket.org/mahoraz/nodenewstak18#readme"
+  "homepage": "https://bitbucket.org/mahoraz/nodenewstak18#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
