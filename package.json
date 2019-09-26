@@ -1,0 +1,22 @@
+{
+  "name": "nodenews",
+  "version": "0.1.0",
+  "description": "simple news website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/mahoraz/nodenewstak18.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "ejs"
+  ],
+  "author": "mahoraz",
+  "license": "LGPL-3.0-or-later",
+  "homepage": "https://bitbucket.org/mahoraz/nodenewstak18#readme"
+}
