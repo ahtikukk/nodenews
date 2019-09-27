@@ -20,6 +20,10 @@
   "license": "LGPL-3.0-or-later",
   "homepage": "https://bitbucket.org/mahoraz/nodenewstak18#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1"
   }
 }
