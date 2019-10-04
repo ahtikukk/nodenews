@@ -16,12 +16,13 @@ const Article = require('./../models/articleModel');
  }
 
  module.exports.article_get_single = (req,res) => {
+    //otsime andmebaasist ühe kindla artikli objectID alusel
     let query = Article.find({_id : req.params.id},null,(err, data) =>{
-        //console.log(articles);
+        //console.log(data);
         //genereerime html dokumendi vahevara abil
         res.render('article/single.ejs',{
-            title: article.title,
-            article: data
+            title: data.title,
+            articles: data
         });
     });
  }

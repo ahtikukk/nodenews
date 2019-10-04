@@ -1,7 +1,7 @@
 <%- include('../partials/header.ejs') -%>
     <div class="article container-fluid">
         <% articles.forEach(article => { %>
-            <a href="<%= article._id %>">
+            <a href="/articles/<%= article._id %>">
                 <h3><%= article.title %></h3>
             </a>
             <p class="font-italic text-muted"><%= article.createdAt %></p>
