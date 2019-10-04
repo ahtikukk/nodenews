@@ -5,15 +5,18 @@ const Mongoose = require('mongoose');
 const BodyParser = require('body-parser');
 const Ejs = require('ejs');
 
-Dotenv.config();
 //impordime routerid
 const mainRouter = require('./routes/main');
 const articleRouter = require('./routes/article');
 const userRouter = require('./routes/user');
+
 //paneme kokk rakenduse
+Dotenv.config();
 const app = Express();
+app.use(Express.static('public'));
 app.use(BodyParser.urlencoded({extended:false}));
 app.use(BodyParser.json());
+
 //seadistame frontend mooroti
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -21,9 +24,18 @@ app.engine('html', Ejs.renderFile);
 
 //andmebaasi ühendamine
 const uri = "mongodb+srv://"+ process.env.DBUSER +":"+ process.env.DBPASSWORD +"@cluster0-w6vf1.gcp.mongodb.net/nodenews?retryWrites=true&w=majority";
-Mongoose.connect(uri, {useNewUrlParser: true});
+Mongoose.connect(uri, 
+    {
+        useNewUrlParser: true,
+        connectTimeoutMS: 5000
+    }, 
+    (err)=>
+    {
+        if(err) console.log(err);
+    }
+);
 
-
+//rakendame routerid
 app.use('/', mainRouter);
 app.use('/articles', articleRouter);
 app.use('/users', userRouter);

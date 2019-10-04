@@ -4,7 +4,7 @@
             <a href="/articles/<%= article._id %>">
                 <h3><%= article.title %></h3>
             </a>
-            <p class="font-italic text-muted"><%= article.createdAt %></p>
+            <p class="font-italic text-muted">Posted <%= moment(article.createdAt).fromNow() %> by <%= article.author.username %></p>
             <p class="font-weight-light"><%= article.description %></p>
         <% }); %> 
     </div> 

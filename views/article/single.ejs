@@ -1,8 +1,12 @@
 <%- include('../partials/header.ejs') -%>
     <% articles.forEach(article => { %>
+        
         <div class="article container-fluid">
             <h3><%= article.title %></h3>
-            <p class="font-italic text-muted"><%= article.createdAt %></p>
+            <div class="poster">
+                <div class="text-left"><i class="user fas fa-user fa-2x mx-2"></i> <%= article.author.firstName + " " + article.author.lastName %></div>
+                <div class="text-right font-italic text-muted"><%= moment(article.createdAt).calendar() %></div>
+            </div>
             <p class="font-weight-bolder"><%= article.description %></p>
             <p class=""><%= article.content %></p>
         </div> 

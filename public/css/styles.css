@@ -1,0 +1,11 @@
+.content{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.brand-color{
+    color: #5DCD14;
+}
+.banner-image{
+    min-height: 150px;
+    width: 100%;
+    background: url('/img/abstract-backgrounds-1-0906.png') center/cover no-repeat;
+}
