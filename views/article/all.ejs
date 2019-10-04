@@ -1,0 +1,11 @@
+<%- include('../partials/header.ejs') -%>
+    <div class="article container-fluid">
+        <% articles.forEach(article => { %>
+            <a href="<%= article._id %>">
+                <h3><%= article.title %></h3>
+            </a>
+            <p class="font-italic text-muted"><%= article.createdAt %></p>
+            <p class="font-weight-light"><%= article.description %></p>
+        <% }); %> 
+    </div> 
+<%- include('../partials/footer.ejs') -%>

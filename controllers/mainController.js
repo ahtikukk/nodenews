@@ -1,5 +1,7 @@
 exports.getHomePage = function(req,res){
-    res.send('Tere');
+    res.render('index.ejs',{
+        title: 'Home page'
+    });
 }
 
 exports.getHello = (req,res) => {

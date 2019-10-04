@@ -25,8 +25,8 @@ Mongoose.connect(uri, {useNewUrlParser: true});
 
 
 app.use('/', mainRouter);
-app.use('/article', articleRouter);
-app.use('/user', userRouter);
+app.use('/articles', articleRouter);
+app.use('/users', userRouter);
 
 //käivitame HTTP serveri
 app.listen(process.env.PORT, process.env.HOSTNAME, () =>{
