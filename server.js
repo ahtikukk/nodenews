@@ -23,10 +23,12 @@ app.set('view engine', 'ejs');
 app.engine('html', Ejs.renderFile);
 
 //andmebaasi ühendamine
-const uri = "mongodb+srv://"+ process.env.DBUSER +":"+ process.env.DBPASSWORD +"@cluster0-w6vf1.gcp.mongodb.net/nodenews?retryWrites=true&w=majority";
-Mongoose.connect(uri, 
+
+
+Mongoose.connect(process.env.DBURI, 
     {
         useNewUrlParser: true,
+        useUnifiedTopology: true,
         connectTimeoutMS: 5000
     }, 
     (err)=>
